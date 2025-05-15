@@ -1,0 +1,27 @@
+#notify-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+  
+  .notify {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+  }
+  
+  .notify.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

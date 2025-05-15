@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+@keyframes gradient {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  .webflow-style-input {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: "Lexend", sans-serif !important;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 1rem 1.2rem 1rem;
+    background: transparent;
+    margin-right: 0.5em;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 999;
+      height: 2px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background-position: 0% 0%;
+      background: linear-gradient(
+        to right,
+        #b294ff,
+        #57e6e6,
+        #feffb8,
+        #57e6e6,
+        #b294ff,
+        #57e6e6
+      );
+      background-size: 500% auto;
+      animation: gradient 3s linear infinite;
+    }
+  }
+  
+  .webflow-style-input input {
+    flex-grow: 1;
+    color: #bfd2ff;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-family: "Lexend", sans-serif !important;
+    border: none !important;
+    outline: none;
+    background-color: transparent;
+    vertical-align: middle;
+    &::-webkit-input-placeholder {
+      color: #7881a1;
+    }
+  }
+  

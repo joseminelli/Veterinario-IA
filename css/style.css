@@ -1,0 +1,242 @@
+/*
+    Feito por: José Minelli
+    Email: joseminelli04@gmail.com
+    Github: https://github.com/joseminelli
+*/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+:root {
+  --bot-color: #318ef35c;
+  --user-color: #cbf7df;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #282828;
+  font-family: "Lexend", sans-serif !important;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #181818;
+  box-shadow: 0 0px 20px rgb(0 0 0 / 53%);
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  position: relative;
+  z-index: 2;
+}
+
+#chat-log {
+  flex-grow: 1;
+  display: flex;
+  padding: 15px;
+  padding-top: 2em;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #535353 transparent;
+  flex-direction: column;
+}
+
+#chat-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chat-log::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+#chat-log::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 4px;
+}
+
+.user-message,
+.bot-message {
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  clear: both;
+  position: relative;
+}
+
+.user-message {
+  background-color: var(--user-color);
+  align-self: flex-end;
+  text-align: right;
+  border-bottom-right-radius: 0;
+}
+
+.user-message::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  border-left: 10px solid var(--user-color);
+  border-bottom: 10px solid transparent;
+}
+
+.bot-message {
+  background-color: var(--bot-color);
+  align-self: flex-start;
+  color: white;
+  flex-direction: column;
+  text-align: left;
+  border-bottom-left-radius: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bot-message::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  border-right: 10px solid var(--bot-color);
+  border-bottom: 10px solid transparent;
+}
+
+.bot-info img {
+  margin-right: 10px;
+}
+.atencao {
+  color: #a5ffa5 !important;
+}
+.bot-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.bot-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.bot-name {
+  font-size: 0.8em;
+  color: #eee;
+}
+
+.bot-message p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.user-message p {
+  margin: 0;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background-color: #ffffff0e;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-buttons {
+  position: fixed; 
+  top: 50%; 
+  right: 20px; 
+  transform: translateY(-50%); 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  z-index: 3; 
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  background-color: #333; 
+  opacity: 0.8; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-button:hover {
+  opacity: 1; 
+}
+
+.social-button img {
+  width: 24px; 
+  height: 24px; 
+}
+
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.github {
+  background-color: #24292e;
+}
+
+.email {
+  background-color: #d44638;
+}
+
+@media screen and (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .input-area {
+    flex-direction: column-reverse;
+    align-items: center;
+    box-shadow: 0px 0px 50px rgba(50, 50, 50, 0.5);
+  }
+
+  .webflow-style-input{
+    width: 90% !important;
+    margin-bottom: 10px !important;
+  }
+
+  .input-area input {
+    width: 100%;
+  }
+
+  .input-area button {
+    width: 50%;
+  }
+
+  .bot-message,
+  .user-message {
+    max-width: 80%;
+  }
+
+  .bot-message::before,
+  .user-message::after {
+    left: -5px;
+    bottom: -5px;
+  }
+
+  .user-message::after {
+    right: -5px;
+    bottom: -5px;
+  }
+}
+

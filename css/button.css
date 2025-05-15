@@ -1,0 +1,128 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+#send-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#send-button:hover {
+  background-color: #0056b3;
+}
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to right, #4dc7d9 0%, #66a6ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+}
+
+button:hover svg {
+  transform: rotate(45deg);
+}
+
+@keyframes move-arrow {
+  0% {
+    transform: translateX(0);
+    fill: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, #4dc7d9 0%, #66a6ff 100%);
+  }
+  50% {
+    transform: translateX(100px);
+    fill: black;
+    background-color: black;
+    background: linear-gradient(to right, #333 0%, #000 100%);
+  }
+  75% {
+    transform: translateX(100px);
+    fill: black;
+    background-color: black;
+    background: linear-gradient(to right, #333 0%, #000 100%);
+
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: -10;
+  }
+}
+
+@keyframes reset-arrow {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-text {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+button.clicked .svg-wrapper {
+  animation: move-arrow 1.3s forwards, reset-arrow 2s 3.2s forwards;
+}
+
+button.clicked span {
+  animation: move-text 0.3s forwards;
+}
