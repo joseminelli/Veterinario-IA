@@ -2,6 +2,9 @@
 
 Um chatbot inteligente que responde dúvidas relacionadas a cuidados com pets utilizando a API Gemini do Google (Generative Language API). O bot funciona como um veterinário virtual, auxiliando os usuários e sugerindo sempre a consulta a um veterinário real para casos de problemas mais graves.
 
+![Screenshot](img/screenshot1.png)
+
+
 ---
 
 ## Funcionalidades
@@ -64,8 +67,3 @@ const apiKey = "SUA_KEY";
 
 Se quiser entrar em contato, envie um email para:
 `joseminelli04@gmail.com`
-
----
-
-## Screenshots
-
