@@ -2,7 +2,10 @@
 
 Um chatbot inteligente que responde dúvidas relacionadas a cuidados com pets utilizando a API Gemini do Google (Generative Language API). O bot funciona como um veterinário virtual, auxiliando os usuários e sugerindo sempre a consulta a um veterinário real para casos de problemas mais graves.
 
-![Screenshot](img/screenshot1.png)
+
+<div align="center">
+  <img style="width: 50%;" src="https://raw.githubusercontent.com/joseminelli/Veterinario-IA/refs/heads/main/img/screenshot1.png" alt="preview" style="width: 100%;" />
+</div>
 
 
 ---
